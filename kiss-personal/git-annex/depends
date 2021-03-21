@@ -1,0 +1,8 @@
+cabal make
+curl
+ghc make
+git
+gnupg2
+perl make
+rsync
+zlib

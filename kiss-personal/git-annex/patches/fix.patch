@@ -1,0 +1,11 @@
+--- git-annex-8.20210310.orig/Makefile
++++ git-annex-8.20210310/Makefile
+@@ -24,7 +24,7 @@
+ 
+ # install system-wide
+ # Set PREFIX and DESTDIR to configure where it is installed
+-install: install-bins install-docs install-completions install-desktop
++install: install-bins install-docs install-completions
+ 
+ # installs into your home directory
+ install-home:

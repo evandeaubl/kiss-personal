@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+patch -p1 <fix.patch
+
+export RELEASE_BUILD=1
+
+cabal update
+
+make DESTDIR="$1" install BUILDER=cabal BUILDERCOMMONOPTIONS="-f\"-assistant -webapp -webdav -pairing -dbus -magicmime\"" BUILDEROPTIONS=-j
