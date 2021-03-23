@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+cabal update
+cabal build
+
+mkdir -p "$1/usr/bin"
+cabal install --install-method=copy --installdir="$1/usr/bin"
