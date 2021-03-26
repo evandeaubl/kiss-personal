@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+sed -i '/^.POSIX:$/d' Makefile
+
+make
+make install DESTDIR="$1"
